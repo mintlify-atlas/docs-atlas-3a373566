@@ -1,28 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "Suno API",
+  "projectType": "api-service",
+  "projectName": "Suno API",
+  "projectDescription": "An unofficial open-source API wrapper for Suno.ai that lets you programmatically generate music, lyrics, and audio stems, and integrate AI music generation into agents and applications.",
   "theme": "sequoia",
-  "colors": {
-    "primary": "#342e7d",
-    "light": "#6c64a0",
-    "dark": "#342e7d"
-  },
-  "favicon": "/favicon.svg",
-  "logo": {
-    "light": "https://media.brand.dev/b188703c-a698-4f8a-b079-18fde6607d5b.png",
-    "dark": "https://media.brand.dev/b188703c-a698-4f8a-b079-18fde6607d5b.png"
-  },
-  "navbar": {
-    "primary": {
-      "type": "github",
-      "href": "https://github.com/gcui-art/suno-api"
-    }
-  },
-  "footer": {
-    "socials": {
-      "github": "https://github.com/gcui-art/suno-api"
-    }
-  },
+  "primaryColor": "#342e7d",
+  "lightColor": "#6c64a0",
+  "darkColor": null,
   "navigation": {
     "tabs": [
       {
@@ -79,8 +62,7 @@
             "pages": [
               "api-reference/get",
               "api-reference/clip",
-              "api-reference/get-limit",
-              "api-reference/persona"
+              "api-reference/get-limit"
             ]
           },
           {
@@ -92,5 +74,30 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "Generate music from text prompts via REST API",
+    "Custom Mode: full control over lyrics, style tags, title, and negative tags",
+    "Automatic hCaptcha solving via 2Captcha and Playwright",
+    "OpenAI-compatible /v1/chat/completions endpoint",
+    "Extend existing audio clips",
+    "Separate audio into stems (vocal and instrumental tracks)",
+    "Get word-level lyric alignment timestamps",
+    "One-click deploy to Vercel or Docker",
+    "Auto keep-alive to maintain active Suno session",
+    "Support for multiple Suno accounts via Cookie header override"
+  ],
+  "publicApiSurface": [
+    "POST /api/generate",
+    "POST /api/custom_generate",
+    "POST /api/extend_audio",
+    "POST /api/concat",
+    "POST /api/generate_lyrics",
+    "POST /api/generate_stems",
+    "GET /api/get_aligned_lyrics",
+    "GET /api/get",
+    "GET /api/clip",
+    "GET /api/get_limit",
+    "POST /v1/chat/completions"
+  ]
 }
